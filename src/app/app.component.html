@@ -1,1 +1,6 @@
-<app-navigation></app-navigation>
+<div *ngIf="_as.loggedIn">
+    <app-navigation></app-navigation>
+</div>
+<div *ngIf="!_as.loggedIn">
+    <app-login></app-login>
+</div>

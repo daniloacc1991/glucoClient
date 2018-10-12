@@ -14,7 +14,16 @@ export class NavigationComponent {
     .pipe(
       map(result => result.matches)
     );
+  email: string;
 
-  constructor(private breakpointObserver: BreakpointObserver) { }
+  constructor(private breakpointObserver: BreakpointObserver) {
+    if (localStorage.getItem('user')) {
+      this.email = JSON.parse(localStorage.getItem('user')).displayName || JSON.parse(localStorage.getItem('user')).email;
+    }
+  }
+
+  logoff() {
+    localStorage.removeItem('user');
+  }
 
 }

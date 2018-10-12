@@ -1,0 +1,50 @@
+<form #form="ngForm" (ngSubmit)="onSubmit()">
+  <mat-card class="memory-card">
+    <mat-card-title>
+      Edit Toma!!
+    </mat-card-title>
+    <mat-card-content>
+
+      <mat-form-field class="full-width">
+        <input disabled matInput placeholder="Fecha de la Toma" [(ngModel)]="gluco.date" name="date" [matDatepicker]="date">
+        <mat-datepicker-toggle matSuffix [for]="date"></mat-datepicker-toggle>
+        <mat-datepicker disabled="false" #date></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field class="media-width">
+        <input class="input-margin" matInput type="number" placeholder="Antes del Desayuno"
+          [(ngModel)]="gluco.beforeBreakfast" name="beforeBreakfast">
+      </mat-form-field>
+
+      <mat-form-field class="media-width">
+
+        <input class="input-margin" matInput type="number" placeholder="Despues del Desayuno"
+          [(ngModel)]="gluco.afterBreakfast" name="afterBreakfast">
+      </mat-form-field>
+
+      <mat-form-field class="media-width">
+        <input class="input-margin" matInput type="number" placeholder="Antes del Almuerzo"
+          [(ngModel)]="gluco.beforeLunch" name="beforeLunch">
+      </mat-form-field>
+
+      <mat-form-field class="media-width">
+        <input class="input-margin" matInput type="number" placeholder="Despues del Almuerzo"
+          [(ngModel)]="gluco.afterLunch" name="afterLunch">
+      </mat-form-field>
+
+      <mat-form-field class="media-width">
+        <input class="input-margin" matInput type="number" placeholder="Antes de la Cena"
+          [(ngModel)]="gluco.beforeDinner" name="beforeDinner">
+      </mat-form-field>
+
+      <mat-form-field class="media-width">
+        <input class="input-margin" matInput type="number" placeholder="Despues de la Cena"
+          [(ngModel)]="gluco.afterDinner" name="afterDinner">
+      </mat-form-field>
+
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit">Guardar</button>
+    </mat-card-actions>
+  </mat-card>
+</form>

@@ -1,0 +1,21 @@
+<form #form="ngForm" (ngSubmit)="onSubmit()">
+  <mat-card class="memory-card">
+    <mat-card-title>
+      Agregar Toma!!
+    </mat-card-title>
+    <mat-card-content>
+      <mat-form-field class="full-width">
+        <input class="input-margin" matInput placeholder="Correo" [(ngModel)]="user.email" name="email" readonly>
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input class="input-margin" matInput placeholder="Nombre para Mostrar" [(ngModel)]="user.displayName" name="displayName">
+      </mat-form-field>
+      <mat-form-field class="full-width">
+          <input class="input-margin" matInput placeholder="URL Foto" [(ngModel)]="user.photoURL" name="photoURL">
+        </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit">Guardar</button>
+    </mat-card-actions>
+  </mat-card>
+</form>

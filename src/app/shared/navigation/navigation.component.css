@@ -20,3 +20,16 @@
 .container > * {
   width: 100%;
 }
+
+.margin-span {
+  margin-left: 5%;
+}
+
+.size-big {
+  font-size: 50px !important;
+}
+
+.spanEmail {
+  display: block;
+  margin-top: 5%;
+}

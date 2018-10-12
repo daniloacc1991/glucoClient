@@ -1,15 +1,66 @@
-form {
-  min-width: 150px;
-  max-width: 500px;
-  width: 100%;
-  align-items: center;
+.button-row button,
+.button-row a {
+  margin-right: 8px;
+  text-align: center;
 }
 
-.full-width {
+.example-margin{
+  display: inline-block;
+}
+
+.example-full-width {
   width: 100%;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 599px) {
+  .memory-card {
+      min-width: 90%;
+      max-width: 90%;
+  }
+
+  .container {
+      max-width: 90%;
+      width: 90%;
+      margin: auto;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) {
+//     .memory-card {
+//         min-width: 60%;
+//         max-width: 50%;
+//     }
+// }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .memory-card {
+      min-width: 35%;
+      max-width: 35%;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) { }
+
+.memory-card {
+  width: 100%;
+  margin: auto;
+  margin-top: 2%;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+.button-row {
+  text-align: center;
+  margin-top: 2%;
 }
 
 .button-row button,
 .button-row a {
-  margin-right: 8px;
+  margin: auto;
 }

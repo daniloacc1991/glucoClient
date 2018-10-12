@@ -15,16 +15,38 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './components/home/home.component';
 import { NavigationComponent } from './shared/navigation/navigation.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import { MatButtonModule } from '@angular/material/button';
+import { MatTableModule } from '@angular/material/table';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule, MatPaginatorModule, MatSortModule, MatNativeDateModule } from '@angular/material';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { ChartModule } from 'angular-highcharts';
+
+
+// Components
+import { AddGlucoComponent } from './components/add-gluco/add-gluco.component';
+import { ViewGlucosComponent } from './components/view-glucos/view-glucos.component';
+import { EditGlucoComponent } from './components/edit-gluco/edit-gluco.component';
+import { AuthGuard } from './services/auth.guard';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    NavigationComponent
+    NavigationComponent,
+    AddGlucoComponent,
+    ViewGlucosComponent,
+    EditGlucoComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -41,10 +63,20 @@ import { MatInputModule } from '@angular/material/input';
     MatIconModule,
     MatListModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatCardModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatMenuModule,
+    MatProgressSpinnerModule,
+    ChartModule
   ],
   providers: [
-    AngularFireAuth
+    AngularFireAuth,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })

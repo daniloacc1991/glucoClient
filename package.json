@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "ngHmr": "ng serve --hmr --configuration=hmr"
+    "ngHmr": "ng serve --open --hmr --configuration=hmr"
   },
   "private": true,
   "dependencies": {
@@ -25,9 +25,11 @@
     "@angular/pwa": "^0.6.8",
     "@angular/router": "^6.1.0",
     "@angular/service-worker": "^6.1.0",
+    "angular-highcharts": "^6.2.6",
     "angularfire2": "^5.0.2",
     "core-js": "^2.5.4",
     "firebase": "^5.5.4",
+    "highcharts": "^6.1.4",
     "rxjs": "~6.2.0",
     "zone.js": "~0.8.26"
   },
@@ -37,6 +39,7 @@
     "@angular/compiler-cli": "^6.1.0",
     "@angular/language-service": "^6.1.0",
     "@angularclass/hmr": "^2.1.3",
+    "@types/highcharts": "^5.0.31",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
