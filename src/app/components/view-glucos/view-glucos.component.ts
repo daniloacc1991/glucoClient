@@ -29,8 +29,6 @@ export class ViewGlucosComponent implements OnInit {
         map(changes => changes.map(c => ({ key: c.payload.key, ...c.payload.val() })))
       )
       .subscribe(d => {
-        console.log(d);
-        console.log('data Streaming');
         this.dataSource = new ViewGlucosDataSource(this.paginator, this.sort);
         this.dataSource.data = d;
       });

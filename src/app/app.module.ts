@@ -27,7 +27,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { ChartModule } from 'angular-highcharts';
+import { ChartModule } from 'primeng/chart';
 
 
 // Components
