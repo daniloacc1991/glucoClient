@@ -10,7 +10,7 @@ import { map } from 'rxjs/operators';
 @Component({
   selector: 'app-view-glucos',
   templateUrl: './view-glucos.component.html',
-  styleUrls: ['./view-glucos.component.css']
+  styleUrls: ['./view-glucos.component.scss']
 })
 export class ViewGlucosComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
