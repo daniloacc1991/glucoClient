@@ -1,6 +1,6 @@
 export interface TiraGluco {
   key?: string;
-  date: number;
+  date: any;
   beforeBreakfast: number;
   afterBreakfast: number;
   beforeLunch: number;

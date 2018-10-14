@@ -5,9 +5,9 @@
     </mat-card-title>
     <mat-card-content>
       <mat-form-field class="full-width">
-        <input disabled matInput placeholder="Fecha de la Toma" [(ngModel)]="gluco.date" name="date" [matDatepicker]="date">
+        <input readonly matInput placeholder="Fecha de la Toma" [(ngModel)]="gluco.date" name="date" [matDatepicker]="date">
         <mat-datepicker-toggle matSuffix [for]="date"></mat-datepicker-toggle>
-        <mat-datepicker disabled="false" #date></mat-datepicker>
+        <mat-datepicker touchUi disabled="false" #date></mat-datepicker>
       </mat-form-field>
       <mat-form-field class="media-width">
         <input class="input-margin" matInput type="number" placeholder="Antes del Desayuno" [(ngModel)]="gluco.beforeBreakfast" name="beforeBreakfast">
