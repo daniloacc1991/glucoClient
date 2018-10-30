@@ -25,13 +25,10 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this._gs.charts()
       .then(res => {
-        console.log(res);
         this.data = {
           labels: ['beforeBreakfast', 'afterBreakfast', 'beforeLunch', 'afterLunch', 'beforeDinner', 'afterDinner'],
           datasets: res
         };
-        // this.alto = document.getElementsByTagName('body')[0].clientHeight;
-        // console.log(this.alto);
       })
       .catch(err => {
         console.error(err);
