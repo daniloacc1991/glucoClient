@@ -26,6 +26,7 @@ export class ViewGlucosComponent implements OnInit {
   ngOnInit() {
     this.subscription = this.db.list<TiraGluco>('gluco').snapshotChanges()
       .pipe(
+        map(arr => arr.reverse() ),
         map(changes => changes.map(c => ({ key: c.payload.key, ...c.payload.val() })))
       )
       .subscribe(d => {

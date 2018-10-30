@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from 'angularfire2/database';
 import * as moment from 'moment';
-import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 import * as randomcolor from 'randomcolor';
 import { TiraGluco } from '../models/tira-glucometria';
