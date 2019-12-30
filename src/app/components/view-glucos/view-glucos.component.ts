@@ -13,8 +13,8 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./view-glucos.component.scss']
 })
 export class ViewGlucosComponent implements OnInit {
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
+  @ViewChild(MatSort, { static: false }) sort: MatSort;
   dataSource: ViewGlucosDataSource;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
@@ -27,7 +27,7 @@ export class ViewGlucosComponent implements OnInit {
     this.subscription = this.db.list<TiraGluco>('gluco').snapshotChanges()
       .pipe(
         map(changes => changes.map(c => ({ key: c.payload.key, ...c.payload.val() }))),
-        map(arr => arr.reverse() )
+        map(arr => arr.reverse())
       )
       .subscribe(d => {
         this.dataSource = new ViewGlucosDataSource(this.paginator, this.sort);
